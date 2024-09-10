@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+:root[data-theme="light"]{
+
+    /* modo claro */
+    --text: #141919;
+    --background: #eff5f5;
+    --primary: #325858;
+    --secondary: #93cdcd;
+    --accent: #3a9b9c;
+    --border: #d1d1d1;
+    color-scheme: light;
+}
+
+
+:root[data-theme="dark"]{
+    /* modo oscuro */
+    --text: #e6ebeb;
+    --background: #0a1010;
+    --primary: #a7cdcd;
+    --secondary: #326c6c;
+    --accent: #63c4c5;
+    --border: #535353;
+    color-scheme: dark;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.6s ease-in-out;
+}
+
+body{
+    background-color: var(--background);
+    color: var(--text);
+    font-family: sans-serif;
+    min-height: 100vh;
+}
