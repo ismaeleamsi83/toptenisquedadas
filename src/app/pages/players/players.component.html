@@ -1,1 +1,10 @@
-<p>players works!</p>
+<h1>players</h1>
+@for (player of players; track $index) {
+<div >
+    <h2>{{ player.name }}</h2>
+    <p>Ubicación: {{ player.location }}</p>
+    <p>Nivel: {{ player.level }}</p>
+    <p>Ranking: {{ player.ranking }}</p>
+    <img [src]="player.photoUrl" alt="{{ player.name }}" width="150">
+</div>
+}

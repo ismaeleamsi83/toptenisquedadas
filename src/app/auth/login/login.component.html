@@ -1,1 +1,17 @@
-<p>login works!</p>
+<div id="content-form">
+    <form class="form" [formGroup]="formLogin" (ngSubmit)="sendForms()">
+        <p class="title">Login </p>
+        <p class="message">Entra en tu cuenta. </p>
+        <label>
+            <input required="" placeholder="" type="email" class="input" formControlName="email">
+            <span>Email</span>
+        </label> 
+            
+        <label>
+            <input required="" placeholder="" type="password" class="input" formControlName="password">
+            <span>Password</span>
+        </label>
+        <button class="submit" type="submit">Entrar</button>
+        <p class="signin">¿Aún no tienes cuenta? <a [routerLink]="'/auth/register'">Registrarte</a> </p>
+    </form>
+</div>

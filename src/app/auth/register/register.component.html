@@ -1,1 +1,33 @@
-<p>register works!</p>
+<div id="content-form">
+    <form class="form" [formGroup]="formRegister" (ngSubmit)="sendForms()">
+        <p class="title">Registro </p>
+        <p class="message">Date de alta para usar la app. </p>
+            <div class="flex">
+            <label>
+                <input required="" placeholder="" type="text" class="input" formControlName="name">
+                <span>Nombre</span>
+            </label>
+
+            <label>
+                <input required="" placeholder="" type="text" class="input" formControlName="lastname">
+                <span>Apellidos</span>
+            </label>
+        </div>  
+                
+        <label>
+            <input required="" placeholder="" type="email" class="input" formControlName="email">
+            <span>Email</span>
+        </label> 
+            
+        <label>
+            <input required="" placeholder="" type="password" class="input" formControlName="password">
+            <span>Password</span>
+        </label>
+        <label>
+            <input required="" placeholder="" type="password" class="input" formControlName="confpassword">
+            <span>Confirm password</span>
+        </label>
+        <button class="submit" type="submit">Registrarse</button>
+        <p class="signin">¿Ya tienes una cuenta? <a [routerLink]="'/auth/login'">Login</a> </p>
+    </form>
+</div>

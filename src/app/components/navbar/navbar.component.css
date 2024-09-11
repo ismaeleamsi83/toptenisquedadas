@@ -42,8 +42,9 @@ header{
             padding-top: 60px;
             box-shadow: 1px 1px 3px var(--secondary);
             opacity: 0;
-            transform: translateY(-50%);
-            transition: all 0.7s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1.7s ease-in-out, opacity 0.5s ease-in-out;
             ul{
                 background-color: var(--secondary);
                 padding: 32px;
@@ -64,10 +65,10 @@ header{
             } 
         }
         .menu-content.active{
-            transform: translateY(0%);
+            max-height: 500px;
             opacity: 1;
             visibility: visible;
-            transition: all 0.7s ease-in-out;
+            transition: max-height 1.7s ease-in-out, opacity 0.5s ease-in-out;
         }
 
         .content-links-btn{
