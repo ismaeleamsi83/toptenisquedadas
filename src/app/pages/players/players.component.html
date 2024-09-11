@@ -1,10 +1,37 @@
-<h1>players</h1>
-@for (player of players; track $index) {
-<div >
-    <h2>{{ player.name }}</h2>
-    <p>Ubicación: {{ player.location }}</p>
-    <p>Nivel: {{ player.level }}</p>
-    <p>Ranking: {{ player.ranking }}</p>
-    <img [src]="player.photoUrl" alt="{{ player.name }}" width="150">
+
+<div class="card">
+    <p-table [value]="players" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="name">
+                    Nombre <p-sortIcon field="name" />
+                </th>
+                <th pSortableColumn="sex">
+                    Sexo <p-sortIcon field="sex" />
+                </th>
+                <th pSortableColumn="location">
+                    Localización <p-sortIcon field="location" />
+                </th>
+                <th pSortableColumn="level">
+                    Nivel <p-sortIcon field="level" />
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>
+                    <div class="content-photo">
+                        <img src="{{product.photoUrl}}" alt=""> 
+                        <span (click)="selectPlayer(product)" class="player-select">{{ product.name }}</span>
+                    </div>
+                </td>
+                <td>{{ product.sex }}</td>
+                <td>{{ product.location }}</td>
+                <!-- <td>{{ product.level }}</td> -->
+                 <td>
+                    <p-rating [(ngModel)]="product.level" [readonly]="true" [cancel]="false" [stars]="8" [title]="product.level" />
+                 </td>
+            </tr>
+        </ng-template>
+    </p-table>
 </div>
-}

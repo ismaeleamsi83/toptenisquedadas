@@ -1,158 +1,162 @@
 [
-    {
-      "id": 1,
-      "name": "Carlos Fernández",
-      "photoUrl": "https://static.vecteezy.com/system/resources/thumbnails/001/840/618/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg",
-      "location": "Madrid, España",
-      "level": "Avanzado",
-      "ranking": 35,
-      "style": "Agresivo desde el fondo",
-      "stats": {
-        "matchesPlayed": 120,
-        "matchesWon": 85,
-        "winPercentage": 70.83,
-        "setsWon": 220,
-        "recentPerformance": "6 victorias, 1 derrota"
-      },
-      "availability": [
-        { "day": "Martes", "time": "19:00 - 21:00" },
-        { "day": "Jueves", "time": "18:00 - 20:00" }
-      ],
-      "preferences": {
-        "courtType": "Pista dura"
-      },
-      "reviews": [
-        { "author": "Sergio Martín", "text": "Jugador muy técnico y competitivo.", "rating": 5 },
-        { "author": "Lucía López", "text": "Gran deportista, partido difícil.", "rating": 4 }
-      ],
-      "matchHistory": [
-        { "opponent": "Sergio Martín", "result": "Victoria", "date": "2023-09-05" },
-        { "opponent": "Luis Gómez", "result": "Victoria", "date": "2023-09-02" }
-      ]
+  {
+    "id": 1,
+    "name": "Carlos Fernández",
+    "photoUrl": "https://static.vecteezy.com/system/resources/thumbnails/001/840/618/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg",
+    "location": "Madrid, España",
+    "level": 2,
+    "ranking": 35,
+    "sex": "Masculino",
+    "style": "Agresivo desde el fondo",
+    "stats": {
+      "matchesPlayed": 120,
+      "matchesWon": 85,
+      "winPercentage": 70.83,
+      "setsWon": 220,
+      "recentPerformance": "6 victorias, 1 derrota"
     },
-    {
-      "id": 2,
-      "name": "Ana González",
-      "photoUrl": "https://static.vecteezy.com/system/resources/thumbnails/001/840/618/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg",
-      "location": "Barcelona, España",
-      "level": "Intermedio",
-      "ranking": 89,
-      "style": "Defensiva",
-      "stats": {
-        "matchesPlayed": 75,
-        "matchesWon": 42,
-        "winPercentage": 56.00,
-        "setsWon": 100,
-        "recentPerformance": "3 victorias, 2 derrotas"
-      },
-      "availability": [
-        { "day": "Lunes", "time": "17:00 - 19:00" },
-        { "day": "Viernes", "time": "16:00 - 18:00" }
-      ],
-      "preferences": {
-        "courtType": "Arcilla"
-      },
-      "reviews": [
-        { "author": "Marta Sánchez", "text": "Muy constante y gran compañera en dobles.", "rating": 5 },
-        { "author": "Pedro Ruiz", "text": "Partido equilibrado, buena jugadora.", "rating": 4 }
-      ],
-      "matchHistory": [
-        { "opponent": "Marta Sánchez", "result": "Victoria", "date": "2023-09-10" },
-        { "opponent": "Lucía Pérez", "result": "Derrota", "date": "2023-09-08" }
-      ]
+    "availability": [
+      { "day": "Martes", "time": "19:00 - 21:00" },
+      { "day": "Jueves", "time": "18:00 - 20:00" }
+    ],
+    "preferences": {
+      "courtType": "Pista dura"
     },
-    {
-      "id": 3,
-      "name": "Javier Martín",
-      "photoUrl": "https://static.vecteezy.com/system/resources/thumbnails/001/840/618/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg",
-      "location": "Sevilla, España",
-      "level": "Principiante",
-      "ranking": 150,
-      "style": "Saque y volea",
-      "stats": {
-        "matchesPlayed": 30,
-        "matchesWon": 12,
-        "winPercentage": 40.00,
-        "setsWon": 28,
-        "recentPerformance": "2 victorias, 5 derrotas"
-      },
-      "availability": [
-        { "day": "Miércoles", "time": "18:00 - 20:00" },
-        { "day": "Sábado", "time": "10:00 - 12:00" }
-      ],
-      "preferences": {
-        "courtType": "Césped"
-      },
-      "reviews": [
-        { "author": "Raúl Torres", "text": "Jugador con mucho potencial, le falta experiencia.", "rating": 3 },
-        { "author": "Antonio Ramírez", "text": "Buen saque, pero necesita mejorar en la defensa.", "rating": 3 }
-      ],
-      "matchHistory": [
-        { "opponent": "Raúl Torres", "result": "Derrota", "date": "2023-09-09" },
-        { "opponent": "Pedro Hernández", "result": "Victoria", "date": "2023-09-05" }
-      ]
+    "reviews": [
+      { "author": "Sergio Martín", "text": "Jugador muy técnico y competitivo.", "rating": 5 },
+      { "author": "Lucía López", "text": "Gran deportista, partido difícil.", "rating": 4 }
+    ],
+    "matchHistory": [
+      { "opponent": "Sergio Martín", "result": "Victoria", "date": "2023-09-05" },
+      { "opponent": "Luis Gómez", "result": "Victoria", "date": "2023-09-02" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Ana González",
+    "photoUrl": "https://static.vecteezy.com/system/resources/thumbnails/001/840/618/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg",
+    "location": "Barcelona, España",
+    "level": 2,
+    "ranking": 89,
+    "sex": "Femenino",
+    "style": "Defensiva",
+    "stats": {
+      "matchesPlayed": 75,
+      "matchesWon": 42,
+      "winPercentage": 56.00,
+      "setsWon": 100,
+      "recentPerformance": "3 victorias, 2 derrotas"
     },
-    {
-      "id": 4,
-      "name": "Laura Martínez",
-      "photoUrl": "https://static.vecteezy.com/system/resources/thumbnails/001/840/618/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg",
-      "location": "Valencia, España",
-      "level": "Intermedio",
-      "ranking": 65,
-      "style": "Contragolpeadora",
-      "stats": {
-        "matchesPlayed": 85,
-        "matchesWon": 50,
-        "winPercentage": 58.82,
-        "setsWon": 135,
-        "recentPerformance": "4 victorias, 3 derrotas"
-      },
-      "availability": [
-        { "day": "Jueves", "time": "19:00 - 21:00" },
-        { "day": "Domingo", "time": "11:00 - 13:00" }
-      ],
-      "preferences": {
-        "courtType": "Pista dura"
-      },
-      "reviews": [
-        { "author": "Sofía Vega", "text": "Partido muy reñido, excelente rival.", "rating": 5 },
-        { "author": "Carla García", "text": "Jugadora muy inteligente, difícil de vencer.", "rating": 5 }
-      ],
-      "matchHistory": [
-        { "opponent": "Sofía Vega", "result": "Derrota", "date": "2023-09-11" },
-        { "opponent": "Carla García", "result": "Victoria", "date": "2023-09-07" }
-      ]
+    "availability": [
+      { "day": "Lunes", "time": "17:00 - 19:00" },
+      { "day": "Viernes", "time": "16:00 - 18:00" }
+    ],
+    "preferences": {
+      "courtType": "Arcilla"
     },
-    {
-      "id": 5,
-      "name": "David Pérez",
-      "photoUrl": "https://static.vecteezy.com/system/resources/thumbnails/001/840/618/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg",
-      "location": "Bilbao, España",
-      "level": "Avanzado",
-      "ranking": 22,
-      "style": "Juego completo",
-      "stats": {
-        "matchesPlayed": 140,
-        "matchesWon": 110,
-        "winPercentage": 78.57,
-        "setsWon": 250,
-        "recentPerformance": "7 victorias, 1 derrota"
-      },
-      "availability": [
-        { "day": "Martes", "time": "20:00 - 22:00" },
-        { "day": "Viernes", "time": "18:00 - 20:00" }
-      ],
-      "preferences": {
-        "courtType": "Césped"
-      },
-      "reviews": [
-        { "author": "Alejandro Suárez", "text": "Jugador muy completo, difícil de superar.", "rating": 5 },
-        { "author": "Manuel Ortega", "text": "Gran rival, muy competitivo.", "rating": 4 }
-      ],
-      "matchHistory": [
-        { "opponent": "Alejandro Suárez", "result": "Victoria", "date": "2023-09-06" },
-        { "opponent": "Manuel Ortega", "result": "Victoria", "date": "2023-09-03" }
-      ]
-    }
-  ]
-  
+    "reviews": [
+      { "author": "Marta Sánchez", "text": "Muy constante y gran compañera en dobles.", "rating": 5 },
+      { "author": "Pedro Ruiz", "text": "Partido equilibrado, buena jugadora.", "rating": 4 }
+    ],
+    "matchHistory": [
+      { "opponent": "Marta Sánchez", "result": "Victoria", "date": "2023-09-10" },
+      { "opponent": "Lucía Pérez", "result": "Derrota", "date": "2023-09-08" }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Javier Martín",
+    "photoUrl": "https://static.vecteezy.com/system/resources/thumbnails/001/840/618/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg",
+    "location": "Sevilla, España",
+    "level": 3,
+    "ranking": 150,
+    "sex": "Masculino",
+    "style": "Saque y volea",
+    "stats": {
+      "matchesPlayed": 30,
+      "matchesWon": 12,
+      "winPercentage": 40.00,
+      "setsWon": 28,
+      "recentPerformance": "2 victorias, 5 derrotas"
+    },
+    "availability": [
+      { "day": "Miércoles", "time": "18:00 - 20:00" },
+      { "day": "Sábado", "time": "10:00 - 12:00" }
+    ],
+    "preferences": {
+      "courtType": "Césped"
+    },
+    "reviews": [
+      { "author": "Raúl Torres", "text": "Jugador con mucho potencial, le falta experiencia.", "rating": 3 },
+      { "author": "Antonio Ramírez", "text": "Buen saque, pero necesita mejorar en la defensa.", "rating": 3 }
+    ],
+    "matchHistory": [
+      { "opponent": "Raúl Torres", "result": "Derrota", "date": "2023-09-09" },
+      { "opponent": "Pedro Hernández", "result": "Victoria", "date": "2023-09-05" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Laura Martínez",
+    "photoUrl": "https://static.vecteezy.com/system/resources/thumbnails/001/840/618/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg",
+    "location": "Valencia, España",
+    "level": 4,
+    "ranking": 65,
+    "sex": "Femenino",
+    "style": "Contragolpeadora",
+    "stats": {
+      "matchesPlayed": 85,
+      "matchesWon": 50,
+      "winPercentage": 58.82,
+      "setsWon": 135,
+      "recentPerformance": "4 victorias, 3 derrotas"
+    },
+    "availability": [
+      { "day": "Jueves", "time": "19:00 - 21:00" },
+      { "day": "Domingo", "time": "11:00 - 13:00" }
+    ],
+    "preferences": {
+      "courtType": "Pista dura"
+    },
+    "reviews": [
+      { "author": "Sofía Vega", "text": "Partido muy reñido, excelente rival.", "rating": 5 },
+      { "author": "Carla García", "text": "Jugadora muy inteligente, difícil de vencer.", "rating": 5 }
+    ],
+    "matchHistory": [
+      { "opponent": "Sofía Vega", "result": "Derrota", "date": "2023-09-11" },
+      { "opponent": "Carla García", "result": "Victoria", "date": "2023-09-07" }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "David Pérez",
+    "photoUrl": "https://static.vecteezy.com/system/resources/thumbnails/001/840/618/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg",
+    "location": "Bilbao, España",
+    "level": 4,
+    "ranking": 22,
+    "sex": "Masculino",
+    "style": "Juego completo",
+    "stats": {
+      "matchesPlayed": 140,
+      "matchesWon": 110,
+      "winPercentage": 78.57,
+      "setsWon": 250,
+      "recentPerformance": "7 victorias, 1 derrota"
+    },
+    "availability": [
+      { "day": "Martes", "time": "20:00 - 22:00" },
+      { "day": "Viernes", "time": "18:00 - 20:00" }
+    ],
+    "preferences": {
+      "courtType": "Césped"
+    },
+    "reviews": [
+      { "author": "Alejandro Suárez", "text": "Jugador muy completo, difícil de superar.", "rating": 5 },
+      { "author": "Manuel Ortega", "text": "Gran rival, muy competitivo.", "rating": 4 }
+    ],
+    "matchHistory": [
+      { "opponent": "Alejandro Suárez", "result": "Victoria", "date": "2023-09-06" },
+      { "opponent": "Manuel Ortega", "result": "Victoria", "date": "2023-09-03" }
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+.card{
+    width: 100%;
+    max-width: 1200px;
+    margin: 48px auto;
+    padding: 16px;
+
+    th{
+        background-color: var(--accent);
+        color: var(--text);
+    }
+    tr{
+        background-color: var(--secondary);
+        color: var(--primary);
+        transition: none !important;
+    }
+    tr:hover{
+        background-color: var(--secondary-transparent);
+    }
+    
+}
+
+
+.content-photo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    img{
+        height: 30px;
+        border-radius: 50%;
+    }
+    .player-select:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+} 
+
+@media (max-width: 767px) {
+    .card{
+        padding: 16px 32px;
+    }
+}
