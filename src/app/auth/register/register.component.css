@@ -127,6 +127,7 @@
   
   .submit:hover {
     background-color: var(--primary);
+    cursor: pointer;
   }
   
   @keyframes pulse {

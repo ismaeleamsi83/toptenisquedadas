@@ -3,6 +3,9 @@
     max-width: 1200px;
     margin: 48px auto;
     padding: 16px;
+    .search-input{
+        /* padding: 8px 16px; */
+    }
 
     th{
         background-color: var(--accent);
@@ -26,7 +29,9 @@
     align-items: center;
     gap: 8px;
     img{
+        width: 30px;
         height: 30px;
+        object-fit: cover;
         border-radius: 50%;
     }
     .player-select:hover{

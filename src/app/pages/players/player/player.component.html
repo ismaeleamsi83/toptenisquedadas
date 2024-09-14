@@ -1,2 +1,60 @@
-<p>player works!</p>
-<h4>{{player!.name}}</h4>
+<div id="container">
+    @if (playerSelected) {
+    <div class="card">
+        <div class="img-card">
+            <img src="../../../../assets/images/back-player.jpg" alt="">
+        </div>
+        <div class="content-features">
+            <div class="features">
+                <img src="{{player!.photoUrl}}" alt="" id="photo-profile">
+                <span id="name-profile">{{player!.name}}</span>
+                <span class="content-profile">
+                    {{player!.sex}} de {{yearsOld}} años</span>
+                <span class="content-profile">
+                    <i class="pi pi-map-marker"></i>
+                    {{player!.location}}</span>
+                <span class="content-profile">
+                    Nivel: 
+                    <p-rating [(ngModel)]="player!.level" [readonly]="true" [cancel]="false" [stars]="8" />
+                    <!-- {{player!.level}} -->
+                </span>
+                <span class="content-profile">
+                    Preferencia:
+                    {{player!.preferences!.courtType}}
+                </span>
+                <span class="content-profile">
+                    Disponibilidad:
+                    <br>
+                    @for (item of player.availability; track $index) {
+                        <span>
+                            {{item.day}}: {{item.time}}
+                        </span>
+                        <br>
+                    }
+                </span>
+            </div>
+            <div class="features-match">
+                <span>Historial de Partidos</span>
+                <span>Partidos Jugados: {{player!.stats.matchesPlayed}}</span>
+                <span>Partidos Ganados: {{player!.stats.matchesWon}}</span>
+                <span>Sets Ganados: {{player!.stats.setsWon}}</span>
+                <span>Porcentaje: {{player!.stats.winPercentage}}</span>
+                @for (item of player!.matchHistory; track $index) {
+                    <span>{{item.result}} contra {{item.opponent}} fecha: {{item.date}}</span>
+                }
+                
+            </div>
+            <div class="features-buttons">
+                <span>Opciones de Usuario</span>
+                <button class="submit">Agregar como amigo</button>
+                <button class="submit">Escribir mensaje privado</button>
+                <button class="submit">Agregar nuevo Partido</button>
+                <button class="submit">Notas sobre este Jugador</button>
+                <button class="submit">Bloquear Jugador</button>
+            </div>
+        </div>
+    </div>
+    }@else {
+        <p>No player selected</p>
+    }
+</div>

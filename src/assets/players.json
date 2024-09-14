@@ -2,12 +2,13 @@
   {
     "id": 1,
     "name": "Carlos Fernández",
-    "photoUrl": "https://static.vecteezy.com/system/resources/thumbnails/001/840/618/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg",
+    "photoUrl": "https://emprendedores.es/wp-content/uploads/rafa-nadal-que-puede-aprender-un-emprendedor-del-rey-de-roland-garros.gif",
     "location": "Madrid, España",
     "level": 2,
     "ranking": 35,
     "sex": "Masculino",
     "style": "Agresivo desde el fondo",
+    "dateOfBirth": "1990-05-14",
     "stats": {
       "matchesPlayed": 120,
       "matchesWon": 85,
@@ -34,12 +35,13 @@
   {
     "id": 2,
     "name": "Ana González",
-    "photoUrl": "https://static.vecteezy.com/system/resources/thumbnails/001/840/618/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg",
+    "photoUrl": "https://emprendedores.es/wp-content/uploads/rafa-nadal-que-puede-aprender-un-emprendedor-del-rey-de-roland-garros.gif",
     "location": "Barcelona, España",
     "level": 2,
     "ranking": 89,
     "sex": "Femenino",
     "style": "Defensiva",
+    "dateOfBirth": "1993-03-22",
     "stats": {
       "matchesPlayed": 75,
       "matchesWon": 42,
@@ -66,12 +68,13 @@
   {
     "id": 3,
     "name": "Javier Martín",
-    "photoUrl": "https://static.vecteezy.com/system/resources/thumbnails/001/840/618/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg",
+    "photoUrl": "https://emprendedores.es/wp-content/uploads/rafa-nadal-que-puede-aprender-un-emprendedor-del-rey-de-roland-garros.gif",
     "location": "Sevilla, España",
     "level": 3,
     "ranking": 150,
     "sex": "Masculino",
     "style": "Saque y volea",
+    "dateOfBirth": "1995-11-10",
     "stats": {
       "matchesPlayed": 30,
       "matchesWon": 12,
@@ -98,12 +101,13 @@
   {
     "id": 4,
     "name": "Laura Martínez",
-    "photoUrl": "https://static.vecteezy.com/system/resources/thumbnails/001/840/618/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg",
+    "photoUrl": "https://emprendedores.es/wp-content/uploads/rafa-nadal-que-puede-aprender-un-emprendedor-del-rey-de-roland-garros.gif",
     "location": "Valencia, España",
     "level": 4,
     "ranking": 65,
     "sex": "Femenino",
     "style": "Contragolpeadora",
+    "dateOfBirth": "1991-07-29",
     "stats": {
       "matchesPlayed": 85,
       "matchesWon": 50,
@@ -130,12 +134,13 @@
   {
     "id": 5,
     "name": "David Pérez",
-    "photoUrl": "https://static.vecteezy.com/system/resources/thumbnails/001/840/618/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg",
+    "photoUrl": "https://emprendedores.es/wp-content/uploads/rafa-nadal-que-puede-aprender-un-emprendedor-del-rey-de-roland-garros.gif",
     "location": "Bilbao, España",
     "level": 4,
     "ranking": 22,
     "sex": "Masculino",
     "style": "Juego completo",
+    "dateOfBirth": "1988-09-05",
     "stats": {
       "matchesPlayed": 140,
       "matchesWon": 110,
@@ -158,5 +163,104 @@
       { "opponent": "Alejandro Suárez", "result": "Victoria", "date": "2023-09-06" },
       { "opponent": "Manuel Ortega", "result": "Victoria", "date": "2023-09-03" }
     ]
-  }
+  },
+  {
+    "id": 6,
+    "name": "Isabel López",
+    "photoUrl": "https://emprendedores.es/wp-content/uploads/rafa-nadal-que-puede-aprender-un-emprendedor-del-rey-de-roland-garros.gif",
+    "location": "Granada, España",
+    "level": 3,
+    "ranking": 120,
+    "sex": "Femenino",
+    "style": "Ofensiva",
+    "dateOfBirth": "1994-12-02",
+    "stats": {
+      "matchesPlayed": 60,
+      "matchesWon": 32,
+      "winPercentage": 53.33,
+      "setsWon": 90,
+      "recentPerformance": "3 victorias, 3 derrotas"
+    },
+    "availability": [
+      { "day": "Lunes", "time": "18:00 - 20:00" },
+      { "day": "Miércoles", "time": "17:00 - 19:00" }
+    ],
+    "preferences": {
+      "courtType": "Pista dura"
+    },
+    "reviews": [
+      { "author": "Lucía Sánchez", "text": "Buen ritmo de juego, gran rival.", "rating": 4 },
+      { "author": "María Torres", "text": "Ataca muy bien, difícil de contener.", "rating": 4 }
+    ],
+    "matchHistory": [
+      { "opponent": "Lucía Sánchez", "result": "Victoria", "date": "2023-09-12" },
+      { "opponent": "María Torres", "result": "Derrota", "date": "2023-09-09" }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Pablo García",
+    "photoUrl": "https://emprendedores.es/wp-content/uploads/rafa-nadal-que-puede-aprender-un-emprendedor-del-rey-de-roland-garros.gif",
+    "location": "Córdoba, España",
+    "level": 4,
+    "ranking": 45,
+    "sex": "Masculino",
+    "style": "Contragolpeador",
+    "dateOfBirth": "1987-06-18",
+    "stats": {
+      "matchesPlayed": 130,
+      "matchesWon": 95,
+      "winPercentage": 73.08,
+      "setsWon": 210,
+      "recentPerformance": "5 victorias, 2 derrotas"
+    },
+    "availability": [
+      { "day": "Martes", "time": "17:00 - 19:00" },
+      { "day": "Sábado", "time": "10:00 - 12:00" }
+    ],
+    "preferences": {
+      "courtType": "Arcilla"
+    },
+    "reviews": [
+      { "author": "Carlos Muñoz", "text": "Jugador defensivo pero letal en los contragolpes.", "rating": 5 },
+      { "author": "José Fernández", "text": "Buen ritmo y excelente juego en red.", "rating": 4 }
+    ],
+    "matchHistory": [
+      { "opponent": "Carlos Muñoz", "result": "Victoria", "date": "2023-09-11" },
+      { "opponent": "José Fernández", "result": "Victoria", "date": "2023-09-07" }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "María Rodríguez",
+    "photoUrl": "https://emprendedores.es/wp-content/uploads/rafa-nadal-que-puede-aprender-un-emprendedor-del-rey-de-roland-garros.gif",
+    "location": "Málaga, España",
+    "level": 2,
+    "ranking": 105,
+    "sex": "Femenino",
+    "style": "Saque y red",
+    "dateOfBirth": "1996-04-15",
+    "stats": {
+      "matchesPlayed": 50,
+      "matchesWon": 28,
+      "winPercentage": 56.00,
+      "setsWon": 75,
+      "recentPerformance": "4 victorias, 1 derrota"
+    },
+    "availability": [
+      { "day": "Viernes", "time": "16:00 - 18:00" },
+      { "day": "Domingo", "time": "09:00 - 11:00" }
+    ],
+    "preferences": {
+      "courtType": "Césped"
+    },
+    "reviews": [
+      { "author": "Lucía Pérez", "text": "Dominante en la red, muy buen saque.", "rating": 4 },
+      { "author": "Carmen Ruiz", "text": "Jugadora con gran proyección, excelente compañera.", "rating": 5 }
+    ],
+    "matchHistory": [
+      { "opponent": "Lucía Pérez", "result": "Victoria", "date": "2023-09-10" },
+      { "opponent": "Carmen Ruiz", "result": "Victoria", "date": "2023-09-08" }
+    ]
+  }  
 ]
