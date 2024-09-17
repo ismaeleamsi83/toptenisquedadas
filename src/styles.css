@@ -2,46 +2,47 @@
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
+/* editor */
+@import "../node_modules/quill/dist/quill.core.css";
+@import "../node_modules/quill/dist/quill.snow.css";
 
-:root[data-theme="light"]{
 
-    /* modo claro */
-    --text: rgb(20, 25, 25);
-    --background: rgb(239, 245, 245);
-    --primary: rgb(50, 88, 88);
-    --secondary: rgb(147, 205, 205);
-    --secondary-transparent: rgb(147, 205, 205, 0.8);
-    --accent: rgb(58, 155, 156);
-    --border: rgb(209, 209, 209);
-    color-scheme: light;
+:root[data-theme="light"] {
+  /* modo claro */
+  --text: rgb(20, 25, 25);
+  --background: rgb(239, 245, 245);
+  --primary: rgb(50, 88, 88);
+  --secondary: rgb(147, 205, 205);
+  --secondary-transparent: rgb(147, 205, 205, 0.8);
+  --accent: rgb(58, 155, 156);
+  --border: rgb(209, 209, 209);
+  color-scheme: light;
 }
 
-
-:root[data-theme="dark"]{
-    /* modo oscuro */
-    --text: rgb(230, 235, 235);
-    --background: rgb(10, 16, 16);
-    --primary: rgb(167, 205, 205);
-    --secondary: rgb(50, 108, 108);
-    --secondary-transparent: rgb(50, 108, 108, 0.8);
-    --accent: rgb(99, 196, 197);
-    --border: rgb(83, 83, 83);
-    color-scheme: dark;
+:root[data-theme="dark"] {
+  /* modo oscuro */
+  --text: rgb(230, 235, 235);
+  --background: rgb(10, 16, 16);
+  --primary: rgb(167, 205, 205);
+  --secondary: rgb(50, 108, 108);
+  --secondary-transparent: rgb(50, 108, 108, 0.8);
+  --accent: rgb(99, 196, 197);
+  --border: rgb(83, 83, 83);
+  color-scheme: dark;
 }
 
-
-*{
-    /* margin: 0;
+* {
+  /* margin: 0;
     padding: 0; */
-    box-sizing: border-box;
-    transition: background-color 0.6s ease-in-out;
+  box-sizing: border-box;
+  transition: background-color 0.6s ease-in-out;
 }
 
-body{
-    background-color: var(--background);
-    color: var(--text);
-    font-family: sans-serif;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }

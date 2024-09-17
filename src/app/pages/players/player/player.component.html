@@ -48,8 +48,8 @@
                 <span>Opciones de Usuario</span>
                 <button class="submit">Agregar como amigo</button>
                 <button class="submit">Escribir mensaje privado</button>
-                <button class="submit">Agregar nuevo Partido</button>
-                <button class="submit">Notas sobre este Jugador</button>
+                <button class="submit" (click)="visibleMatch = !visibleMatch" >Agregar nuevo Partido</button>
+                <button class="submit" (click)="showDialog()">Notas sobre este Jugador</button>
                 <button class="submit">Bloquear Jugador</button>
             </div>
         </div>
@@ -58,3 +58,16 @@
         <p>No player selected</p>
     }
 </div>
+
+
+
+<!-- dialog notas -->
+<div class="card flex justify-content-center">
+    <p-dialog header="Notas" [modal]="true" [(visible)]="visible" [style]="{ maxWidth: '800px' }">
+        <p-editor [(ngModel)]="text" [style]="{ height: '320px' }" />
+        <button class="submit" (click)="saveNote()">Guardar</button>
+    </p-dialog>
+</div>
+
+<!-- dialog nuevo partido -->
+ <app-new-match [showMatch]="visibleMatch" (newItemEvent)="changeDialogMatch($event)"></app-new-match>

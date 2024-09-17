@@ -6,10 +6,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
+import { DialogModule } from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
+
+import { EditorModule } from 'primeng/editor';
+import { NewMatchComponent } from "../../../shared/new-match/new-match.component";
+
 @Component({
   selector: 'app-player',
   standalone: true,
-  imports: [RatingModule, CommonModule, FormsModule],
+  imports: [RatingModule, CommonModule, FormsModule, DialogModule, ButtonModule, InputTextModule, EditorModule, NewMatchComponent],
   providers:[BrowserModule, BrowserAnimationsModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './player.component.html',
@@ -20,6 +27,26 @@ export class PlayerComponent implements OnInit {
   player:any;
   yearsOld: any;
   playerSelected: boolean = false;
+
+
+  //Dialog notas
+  visible: boolean = false;
+  showDialog() {
+      this.visible = true;
+  }
+  saveNote(){
+    console.log(this.text);
+    this.visible = false;
+  }
+  //Editor
+  text: string | undefined;
+
+
+  //Variable Dialog Match
+  visibleMatch: boolean = false;
+  changeDialogMatch(newValue:boolean){
+    this.visibleMatch = newValue;
+  }
 
   constructor(
     private playerService: PlayerService
