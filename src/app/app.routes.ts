@@ -18,6 +18,10 @@ export const routes: Routes = [
         loadChildren: () => import('./pages/players/players.routes').then(m => m.playersRoutes)
     },
     {
+        path: 'messages',
+        loadChildren: () => import('./pages/messages/messages.routes').then(m => m.messagesRoutes)
+    },
+    {
         path: '**',
         redirectTo: ''
     },

@@ -1,3 +1,4 @@
+import { routes } from './../../../app.routes';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { PlayerService } from '../../../services/player.service';
 import { RatingModule } from 'primeng/rating';
@@ -12,11 +13,16 @@ import { InputTextModule } from 'primeng/inputtext';
 
 import { EditorModule } from 'primeng/editor';
 import { NewMatchComponent } from "../../../shared/new-match/new-match.component";
+import { Router, RouterLink,  RouterModule } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-player',
   standalone: true,
-  imports: [RatingModule, CommonModule, FormsModule, DialogModule, ButtonModule, InputTextModule, EditorModule, NewMatchComponent],
+  imports: [RatingModule, CommonModule, FormsModule, DialogModule, 
+    ButtonModule, InputTextModule, EditorModule, NewMatchComponent,
+    RouterLink, RouterModule],
   providers:[BrowserModule, BrowserAnimationsModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './player.component.html',
@@ -49,7 +55,8 @@ export class PlayerComponent implements OnInit {
   }
 
   constructor(
-    private playerService: PlayerService
+    private playerService: PlayerService,
+    private router: Router
   ){}
 
   ngOnInit(): void {
@@ -94,5 +101,12 @@ export class PlayerComponent implements OnInit {
           
       this.yearsOld = years;
       this.playerSelected = true;
+  }
+
+  sendMessage(){
+    console.log(this.player);
+    let namePlayer = this.player.name;
+    const name = namePlayer.replace(" ", "-");
+    this.router.navigateByUrl(`/messages/${name}`);
   }
 }

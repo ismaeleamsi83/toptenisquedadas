@@ -19,7 +19,7 @@ header{
         background-color: var(--secondary);
         border-radius: 30px;
         height: 60px;
-        box-shadow: 1px 1px 3px var(--secondary);
+        box-shadow: 1px 1px 3px var(--text);
         span{
             height: 56px;
             width: auto;
