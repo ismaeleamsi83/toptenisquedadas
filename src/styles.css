@@ -16,6 +16,7 @@
   --secondary-transparent: rgb(147, 205, 205, 0.8);
   --accent: rgb(58, 155, 156);
   --border: rgb(209, 209, 209);
+  --color-fail-form: rgb(82, 82, 82);
   color-scheme: light;
 }
 
@@ -28,6 +29,7 @@
   --secondary-transparent: rgb(50, 108, 108, 0.8);
   --accent: rgb(99, 196, 197);
   --border: rgb(83, 83, 83);
+  --color-fail-form: rgb(82, 82, 82);
   color-scheme: dark;
 }
 

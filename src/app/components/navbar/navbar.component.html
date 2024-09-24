@@ -2,7 +2,14 @@
     <nav>
         <span>
             <img src="../../../assets/images/logo-tenis-quedadas.png" alt="" [routerLink]="''">
+            
         </span>
+        <div *ngIf="(token$ | async) as token">
+            <p (click)="cleanToken()">Token presente - Cerrar Sesion</p>
+        </div>
+        <div *ngIf="!(token$ | async)">
+            <p [routerLink]="'/auth/login'">Login</p>
+        </div>
         <div class="menu-content" [ngClass]="{'active': showMenuBol}">
             <ul>
                 @for (item of links; track $index) {

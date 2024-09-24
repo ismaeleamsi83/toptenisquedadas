@@ -2,7 +2,7 @@
     <form class="form" [formGroup]="formRegister" (ngSubmit)="sendForms()">
         <p class="title">Registro </p>
         <p class="message">Date de alta para usar la app. </p>
-            <div class="flex">
+        <div class="flex">
             <label>
                 <input required="" placeholder="" type="text" class="input" formControlName="name">
                 <span>Nombre</span>
@@ -13,21 +13,49 @@
                 <span>Apellidos</span>
             </label>
         </div>  
-                
+        <div class="flex name-lastname">
+            @if(formRegister.get('name')?.invalid && submitted){
+                <span class="fail-form">Ingrese su nombre</span>
+            }
+            @if(formRegister.get('lastname')?.invalid && submitted){
+                <span class="fail-form">Ingrese su apellido</span>
+            }
+        </div>
         <label>
             <input required="" placeholder="" type="email" class="input" formControlName="email">
             <span>Email</span>
         </label> 
-            
+        <div class="flex">
+            @if(formRegister.get('email')?.invalid && submitted){
+                <span class="fail-form">Email no válido</span>
+            }
+        </div>    
         <label>
             <input required="" placeholder="" type="password" class="input" formControlName="password">
-            <span>Password</span>
+            <span>Contraseña</span>
         </label>
+        <div class="flex">
+            @if(formRegister.get('password')?.invalid && submitted){
+                <span class="fail-form">
+                    La contraseña debe contener al menos una letra minúscula, una letra mayúscula, un carácter especial, no debe contener espacios, y debe tener entre 8 y 16 caracteres de longitud.
+                </span>
+            }
+        </div> 
         <label>
             <input required="" placeholder="" type="password" class="input" formControlName="confpassword">
-            <span>Confirm password</span>
+            <span>Confirmar contraseña</span>
         </label>
+        <div class="flex">
+            @if(formRegister.get('confpassword')?.invalid && submitted){
+                <span class="fail-form">Debe ser igual a la contraseña</span>
+            }
+        </div> 
         <button class="submit" type="submit">Registrarse</button>
         <p class="signin">¿Ya tienes una cuenta? <a [routerLink]="'/auth/login'">Login</a> </p>
     </form>
+</div>
+
+
+<div class="card flex justify-content-center">
+    <p-toast />
 </div>

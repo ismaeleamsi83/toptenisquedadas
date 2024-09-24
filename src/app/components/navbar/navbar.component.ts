@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { Observable } from 'rxjs';
+import { TokenService } from '../../services/token.service';
 
 @Component({
   selector: 'app-navbar',
@@ -29,8 +31,17 @@ export class NavbarComponent implements OnInit {
     { title: 'Pistas', url: '/', selected: false },
   ]
 
+  token$: Observable<string | null>;
+
+  constructor(public tokenService: TokenService,
+    private router: Router
+  ) {
+    this.token$ = this.tokenService.getToken();
+   }
+
   ngOnInit(): void {
     this.checkWindowSize();
+    
   }
 
   @HostListener('window:resize')
@@ -53,6 +64,10 @@ export class NavbarComponent implements OnInit {
 
   showMenu(){
     this.showMenuBol = !this.showMenuBol;
+  }
+
+  cleanToken(){
+    this.tokenService.clearToken();
   }
   
 }

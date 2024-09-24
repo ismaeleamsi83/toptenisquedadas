@@ -9,6 +9,9 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class PlayerService {
 
   urlPlayers = '/assets/players.json';
+  urlAPI = 'http://localhost:3000/register';
+
+  urlApi2 = 'http://192.168.1.44:3000';
 
   private playerSelected: BehaviorSubject<any> = new BehaviorSubject<any>({});
   playerSelected$: Observable<any> = this.playerSelected.asObservable();
@@ -25,5 +28,13 @@ export class PlayerService {
     this.playerSelected.next(player);
   }
 
+  newPlayer(newPlayer:any ): Observable<any>{
+    console.log(newPlayer);
+    return this.http.post(this.urlAPI, newPlayer, { observe: 'response' });
+  }
+
+  loginPlayer(player: any): Observable<any>{
+    return this.http.post(`${this.urlApi2}/login`, player, { observe: 'response' });
+  }
 
 }
