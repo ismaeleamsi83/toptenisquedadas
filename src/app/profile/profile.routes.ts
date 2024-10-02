@@ -3,12 +3,12 @@ import { Routes } from '@angular/router';
 export const profileRoutes: Routes = [
     
     {
-        path: '',
+        path: ':name',
         loadComponent: () => import('./profile.component').then(m => m.ProfileComponent)
     },
     {
-        path: 'data',
-        loadComponent: () => import('./changedata/changedata.component').then(m => m.ChangedataComponent)
+        path: ':name/edit',
+        loadComponent: () => import('./editprofile/editprofile.component').then(m => m.EditprofileComponent)
     },
     {
         path: 'pass',

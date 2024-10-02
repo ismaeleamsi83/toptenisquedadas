@@ -4,8 +4,9 @@
             <img src="../../../assets/images/logo-tenis-quedadas.png" alt="" [routerLink]="''">
             
         </span>
-        <div *ngIf="(token$ | async) as token">
-            <p (click)="cleanToken()">Token presente - Cerrar Sesion</p>
+        <div *ngIf="(token$ | async) as token" id="profile-session">
+            <p (click)="goProfile()" class="email-profile">{{emailToken}}</p>
+            <p (click)="cleanToken()" class="email-profile">Cerrar Sesion</p>
         </div>
         <div *ngIf="!(token$ | async)">
             <p [routerLink]="'/auth/login'">Login</p>

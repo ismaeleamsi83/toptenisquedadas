@@ -1,0 +1,111 @@
+<h2>Editar Perfil</h2>
+<form (ngSubmit)="onSubmit()">
+    <!-- Nombre -->
+  <div>
+    <label for="name">Nombre:</label>
+    <input id="name" type="text" [(ngModel)]="user.name" name="name" required />
+  </div>
+
+  <!-- Apellido -->
+  <div>
+    <label for="lastname">Apellidos:</label>
+    <input id="lastname" type="text" [(ngModel)]="user.lastname" name="lastname" required />
+  </div>
+
+  <!-- Sexo -->
+  <div>
+    <label for="sexo">Sexo:</label>
+    <select id="sexo" [(ngModel)]="user.sex" name="sexo" required>
+      <option value="Masculino">Masculino</option>
+      <option value="Femenino">Femenino</option>
+    </select>
+  </div>
+
+   <!-- Fecha de nacimiento -->
+   <div>
+    <label for="birthday">Fecha de nacimiento:</label>
+    <input id="birthday" type="date" [(ngModel)]="user.birthday" name="birthday" required />
+  </div>
+
+  <!-- Sobre mi -->
+  <div>
+    <label for="about">Sobre mí:</label>
+    <textarea rows="5" id="about" type="text" [(ngModel)]="user.about" name="about" required></textarea>
+  </div>
+
+  <!-- Preferencias -->
+  <div>
+    <label for="preference">Preferencia:</label>
+    <select id="preference" [(ngModel)]="user.preference" name="preference" required>
+      <option value="Pista dura">Pista dura</option>
+      <option value="Tierra batida">Tierra batida</option>
+      <option value="Cesped">Cesped</option>
+    </select>
+  </div>
+
+  <!-- Nivel -->
+  <div>
+    <label for="level">Nivel:</label>
+    <select id="level" [(ngModel)]="user.level" name="level" required>
+    <option value="Novato">Novato</option>
+      <option value="Principiante">Principiante</option>
+      <option value="Intermedio">Intermedio</option>
+      <option value="Avanzado">Avanzado</option>
+      <option value="Profesional">Profesional</option>
+    </select>
+  </div>
+
+  <!-- Partidos Jugados -->
+  <div>
+    <label for="matchesPlayed">Partidos Jugados:</label>
+    <input id="matchesPlayed" type="number" [(ngModel)]="user.matchesPlayed" name="matchesPlayed" required />
+  </div>
+
+  <!-- Partidos Ganados -->
+  <div>
+    <label for="matchesWon">Partidos Ganados:</label>
+    <input id="matchesWon" type="number" [(ngModel)]="user.matchesWon" name="matchesWon" required />
+  </div>
+
+  <hr />
+  <!-- Dispinibilidad -->
+  <article>
+    <h3>Disponibilidad</h3>
+    <label for="day">Día:</label>
+    <select id="day" name="day" [(ngModel)]="day">
+        <option value="Lunes">Lunes</option>
+        <option value="Martes">Martes</option>
+        <option value="Miércoles">Miércoles</option>
+        <option value="Jueves">Jueves</option>
+        <option value="Viernes">Viernes</option>
+        <option value="Sábado">Sábado</option>
+        <option value="Domingo">Domingo</option>
+    </select>
+    
+    <!-- Select para la franja horaria -->
+    <label for="fringe">Franja Horaria:</label>
+    <select id="fringe" name="fringe" [(ngModel)]="fringe">
+        <option value="mañana">Mañana</option>
+        <option value="tarde">Tarde</option>
+        <option value="noche">Noche</option>
+    </select>
+
+    <!-- Botón para añadir la selección -->
+    <button type="button" (click)="addAvailability()">Añadir Disponibilidad</button>
+
+    <!-- Sección donde se mostrarán las selecciones -->
+    <div id="disponibilidad-lista">
+        <h4>Disponibilidad Seleccionada:</h4>
+        <ul id="lista-disponibilidad">
+            @for (item of user.availability; track $index) {
+              <li>{{ item }}</li>
+            }
+        </ul>
+    </div>
+  </article>
+
+  <hr />
+  <div>
+    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+  </div>
+</form>

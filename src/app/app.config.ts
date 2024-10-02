@@ -11,6 +11,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes), 
     provideHttpClient(withFetch()),
     provideAnimations(),
-    importProvidersFrom(LucideAngularModule.pick({File, Home, Menu, UserCheck, ArrowUpRight, SendHorizontal }))
+    importProvidersFrom(LucideAngularModule.pick({File, Home, Menu, UserCheck, ArrowUpRight, SendHorizontal })),
+    
   ]
 };
