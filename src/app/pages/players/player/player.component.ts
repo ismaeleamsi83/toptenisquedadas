@@ -14,6 +14,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { EditorModule } from 'primeng/editor';
 import { NewMatchComponent } from "../../../shared/new-match/new-match.component";
 import { Router, RouterLink,  RouterModule } from '@angular/router';
+import { Profile } from '../../../interfaces/profile';
 
 
 
@@ -66,11 +67,14 @@ export class PlayerComponent implements OnInit {
           console.log("playerSelected: ", playerSelected);
           this.player = playerSelected;
 
+
+          // calcula la edad pero luego lo pongo en marcha
           if(this.isObjectEmpty(this.player)){
             console.log("esta vacio");
+            this.router.navigateByUrl("/players");
           }else{
             console.log(this.player);
-            const dateBirthday = new Date(this.player.dateOfBirth);
+            const dateBirthday = new Date(this.player.birthday);
             const nowDate = new Date();
             this.getYearsOld(dateBirthday, nowDate);
           }

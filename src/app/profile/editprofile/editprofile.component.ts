@@ -4,6 +4,8 @@ import { TokenService } from '../../services/token.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule, FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Profile } from '../../interfaces/profile';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 
 
@@ -25,20 +27,32 @@ export class EditprofileComponent implements OnInit{
   user: Profile = {
     name: '',
     lastname: '',
+    password: '',
     preference: 'Pista dura',
     level: 'Novato',
     matchesPlayed: 0,
     matchesWon: 0,
     about: '',
     availability: [],
-    sex: ''
+    sex: '',
+    population: '',
+    fileName: '',
+    fileRaw: '',
+    imageUrl: ''
   };
   day:any = "";
   fringe:any = "";
+  populations:any = "";
+  fileImage: any;
+  
+  fileRaw:any;
+  fileName:any;
+  
 
   constructor(
     private userService: UserService,
-    private tokenService: TokenService
+    private tokenService: TokenService,
+    private http: HttpClient,
   ) { }
 
   ngOnInit(): void {
@@ -47,7 +61,24 @@ export class EditprofileComponent implements OnInit{
       // lastname: new FormControl('', Validators.required),
       // email: new FormControl('', Validators.required),
     });
+    
+    this.getPopulations().subscribe({
+      next: (data) => {
+        this.populations = [...data];
+        this.populations.sort((a:any, b:any) => {
+          if (a.label < b.label) {
+            return -1;
+          } else if (a.label > b.label) {
+            return 1;
+          } else {
+            return 0;
+          }
+        });
+      }
+    });
+
     this.getEmail();
+    
   }
 
 
@@ -88,7 +119,9 @@ export class EditprofileComponent implements OnInit{
       next: (response) => {
         console.log(response);
         this.user = Object.assign({}, this.user, response.user);
-        
+        if(this.user.imageUrl != null){
+          this.user.imageUrl = `data:image/jpeg;base64,${this.user.imageUrl}`;
+        }
         console.log(response.user);
       },
       error: (error) => {
@@ -102,6 +135,13 @@ export class EditprofileComponent implements OnInit{
 
   onSubmit(){
     this.user.token = this.token;
+    
+    // const user: Profile = {
+    //   ...this.user,
+    //   fileRaw: this.fileRaw,
+    //   fileName: this.fileName
+    // }
+    
     console.log(this.user);
 
     this.userService.updateProfileUser(this.user).subscribe({
@@ -122,6 +162,26 @@ export class EditprofileComponent implements OnInit{
     console.log("availability");
     const newAvailability = `${this.day} por la ${this.fringe}`;
     this.user.availability?.push(newAvailability)
+  }
+
+  getPopulations(): Observable<any> {
+
+    return this.http.get('/assets/poblaciones.json');
+  }
+
+  onFileSelected(event: any): void {
+    const file = event.target.files[0]; // Obtener el archivo seleccionado
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        // Convertimos el archivo a base64 y lo almacenamos en user.imageUrl
+        this.user.imageUrl = e.target.result.split(',')[1]; // Guardamos solo la parte base64, sin el encabezado
+        this.fileName = file.name;
+      };
+  
+      reader.readAsDataURL(file); // Leemos el archivo como base64
+    }
+    
   }
 
 }

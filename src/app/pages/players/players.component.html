@@ -5,7 +5,7 @@
         [paginator]="true"
         [rows]="5"
         [tableStyle]="{ 'min-width': '50rem' }"
-        [globalFilterFields]="['name', 'sex', 'location']"
+        [globalFilterFields]="['name', 'sex', 'population']"
         >
 
         <ng-template pTemplate="caption">
@@ -32,8 +32,8 @@
                 <th pSortableColumn="sex">
                     Sexo <p-sortIcon field="sex" />
                 </th>
-                <th pSortableColumn="location">
-                    Localización <p-sortIcon field="location" />
+                <th pSortableColumn="population">
+                    Localización <p-sortIcon field="population" />
                 </th>
                 <th pSortableColumn="level">
                     Nivel <p-sortIcon field="level" />
@@ -44,16 +44,18 @@
             <tr>
                 <td>
                     <div class="content-photo">
-                        <img src="{{product.photoUrl}}" alt=""> 
+                        @if (product.imageUrl != null) {
+                            <img src="{{ product.imageUrl }}" alt="Photo" />
+                        }
                         <span (click)="selectPlayer(product)" class="player-select">{{ product.name }}</span>
                     </div>
                 </td>
                 <td>{{ product.sex }}</td>
-                <td>{{ product.location }}</td>
-                <!-- <td>{{ product.level }}</td> -->
-                 <td>
+                <td>{{ product.population }}</td>
+                <td>{{ product.level }}</td>
+                 <!-- <td>
                     <p-rating [(ngModel)]="product.level" [readonly]="true" [cancel]="false" [stars]="8" [title]="product.level" />
-                 </td>
+                 </td> -->
             </tr>
         </ng-template>
     </p-table>

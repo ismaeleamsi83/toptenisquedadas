@@ -24,6 +24,7 @@ export class ProfileComponent implements OnInit{
   user: Profile = {
     name: '',
     lastname: '',
+    password: '',
     preference: 'Pista dura',
     level: 'Novato',
     matchesPlayed: 0,
@@ -31,8 +32,11 @@ export class ProfileComponent implements OnInit{
     about: '',
     availability: [],
     birthday: new Date,
-    sex: ''
+    sex: '',
+    population: '',
+    imageUrl: ''
   };
+  fileImage: any;
 
   constructor(
     private tokenService: TokenService,
@@ -102,6 +106,9 @@ export class ProfileComponent implements OnInit{
         this.user = Object.assign({}, this.user, user.user);
         if(this.user.birthday){
           this.user.age = this.calculateAge(this.user.birthday);
+        }
+        if(this.user.imageUrl != null){
+          this.user.imageUrl = `data:image/jpeg;base64,${this.user.imageUrl}`;
         }
         console.log(this.user);
         this.show(user.message);

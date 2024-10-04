@@ -10,7 +10,13 @@
     <section>
         <article>
             <span>
-                <img src="https://sportrenders.com/wp-content/uploads/2023/06/Rafa-Nadal-Imagen-PNG-Tenis-Render-Sport-Render-PNG.png" id="image-profile" alt="">
+                @if (user.imageUrl != null) {
+                    <img src="{{user.imageUrl}}" alt="" id="image-profile">
+                }@else {
+                    <img src="https://sportrenders.com/wp-content/uploads/2023/06/Rafa-Nadal-Imagen-PNG-Tenis-Render-Sport-Render-PNG.png" id="image-profile" alt="">
+                }
+                
+                
             </span>
         </article>
         <article>
@@ -23,7 +29,7 @@
                 {{user.sex}} de {{user.age}} años
             </span>
             <span>
-                Madrid, España
+                {{user.population}}
             </span>
         </article>
         <article>

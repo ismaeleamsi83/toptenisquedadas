@@ -1,6 +1,14 @@
 <h2>Editar Perfil</h2>
 <form (ngSubmit)="onSubmit()">
-    <!-- Nombre -->
+  <!-- Imagen -->
+  <div>
+    @if (user.imageUrl != null) {
+      <img src="{{user.imageUrl}}" alt="" id="image-profile">
+    }
+    <label for="image">Imagen:</label>
+    <input id="image" type="file" (change)="onFileSelected($event)" name="image" required />
+  </div>
+  <!-- Nombre -->
   <div>
     <label for="name">Nombre:</label>
     <input id="name" type="text" [(ngModel)]="user.name" name="name" required />
@@ -25,6 +33,17 @@
    <div>
     <label for="birthday">Fecha de nacimiento:</label>
     <input id="birthday" type="date" [(ngModel)]="user.birthday" name="birthday" required />
+  </div>
+
+  <!-- Poblacion -->
+  <div>
+    <label for="population">Poblacion:</label>
+    <select id="population" [(ngModel)]="user.population" name="population" required>
+      @for (item of populations; track $index) {
+        <option value="{{item.label}}">{{item.label}}</option>
+      }
+      
+    </select>
   </div>
 
   <!-- Sobre mi -->

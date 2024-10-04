@@ -12,6 +12,7 @@ import { Router, RouterModule } from '@angular/router';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { InputTextModule } from 'primeng/inputtext';
+import { Profile } from '../../interfaces/profile';
 
 
 @Component({
@@ -26,7 +27,23 @@ import { InputTextModule } from 'primeng/inputtext';
 })
 export class PlayersComponent implements OnInit{
 
-  players!: any[];
+  players: Profile[] = [
+    {
+      name: '',
+      lastname: '',
+      password: '',
+      preference: 'Pista dura',
+      level: 'Novato',
+      matchesPlayed: 0,
+      matchesWon: 0,
+      about: '',
+      availability: [],
+      birthday: new Date,
+      sex: '',
+      population: '',
+      imageUrl: ''
+    }
+  ];
 
 
   constructor(
@@ -37,7 +54,15 @@ export class PlayersComponent implements OnInit{
   ngOnInit(): void {
     this.playerService.getPlayers().subscribe(
       data => {
-        this.players = data;
+        this.players = data.players;
+        
+        this.players.forEach( (item:any ) =>{
+          if(item.imageUrl != null){
+            item.imageUrl = `data:image/jpeg;base64,${item.imageUrl}`;
+          }
+        });
+        
+        console.log(this.players);
       },
       error => {
         console.error(error);
@@ -46,6 +71,7 @@ export class PlayersComponent implements OnInit{
   }
 
   selectPlayer(player: any){
+    console.log(player);
     this.playerService.setPlayerSelected(player);
     let namePlayer = player.name;
     const name = namePlayer.replace(" ", "-");

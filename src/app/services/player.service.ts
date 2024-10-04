@@ -13,6 +13,8 @@ export class PlayerService {
 
   urlApi2 = 'http://192.168.1.44:3000';
 
+  urlApi3 = 'http://192.168.1.44:3000/players';
+
   private playerSelected: BehaviorSubject<any> = new BehaviorSubject<any>({});
   playerSelected$: Observable<any> = this.playerSelected.asObservable();
 
@@ -21,7 +23,8 @@ export class PlayerService {
   ) { }
 
   getPlayers():Observable<any>{
-    return this.http.get<any>(this.urlPlayers);
+    // return this.http.get<any>(this.urlPlayers);
+    return this.http.get<any>(this.urlApi3);
   }
 
   setPlayerSelected(player: any){
