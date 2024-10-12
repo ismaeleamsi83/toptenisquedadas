@@ -108,7 +108,8 @@ export class ProfileComponent implements OnInit{
           this.user.age = this.calculateAge(this.user.birthday);
         }
         if(this.user.imageUrl != null){
-          this.user.imageUrl = `data:image/jpeg;base64,${this.user.imageUrl}`;
+           //this.user.imageUrl = `data:image/jpeg;base64,${this.user.imageUrl}`;
+          this.fileImage = `data:image/jpeg;base64,${this.user.imageUrl}`;
         }
         console.log(this.user);
         this.show(user.message);

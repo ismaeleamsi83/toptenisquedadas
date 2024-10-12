@@ -3,7 +3,7 @@
   <!-- Imagen -->
   <div>
     @if (user.imageUrl != null) {
-      <img src="{{user.imageUrl}}" alt="" id="image-profile">
+      <img src="{{fileImage}}" alt="" id="image-profile">
     }
     <label for="image">Imagen:</label>
     <input id="image" type="file" (change)="onFileSelected($event)" name="image" required />

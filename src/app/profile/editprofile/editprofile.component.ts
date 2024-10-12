@@ -79,6 +79,7 @@ export class EditprofileComponent implements OnInit{
 
     this.getEmail();
     
+    
   }
 
 
@@ -120,7 +121,9 @@ export class EditprofileComponent implements OnInit{
         console.log(response);
         this.user = Object.assign({}, this.user, response.user);
         if(this.user.imageUrl != null){
-          this.user.imageUrl = `data:image/jpeg;base64,${this.user.imageUrl}`;
+          //this.user.imageUrl = `data:image/jpeg;base64,${this.user.imageUrl}`;
+          this.fileImage = `data:image/jpeg;base64,${this.user.imageUrl}`;
+          console.log(this.user.imageUrl);
         }
         console.log(response.user);
       },
@@ -136,11 +139,9 @@ export class EditprofileComponent implements OnInit{
   onSubmit(){
     this.user.token = this.token;
     
-    // const user: Profile = {
-    //   ...this.user,
-    //   fileRaw: this.fileRaw,
-    //   fileName: this.fileName
-    // }
+    if(this.user.imageUrl != null){
+      // this.user.imageUrl = `data:image/jpeg;base64,${this.user.imageUrl}`;
+    }
     
     console.log(this.user);
 
@@ -176,6 +177,9 @@ export class EditprofileComponent implements OnInit{
       reader.onload = (e: any) => {
         // Convertimos el archivo a base64 y lo almacenamos en user.imageUrl
         this.user.imageUrl = e.target.result.split(',')[1]; // Guardamos solo la parte base64, sin el encabezado
+        console.log("guarda el img nuevo en imageUrl");
+        console.log(this.user.imageUrl);
+        this.fileImage = `data:image/jpeg;base64,${this.user.imageUrl}`;
         this.fileName = file.name;
       };
   
