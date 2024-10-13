@@ -20,6 +20,9 @@ export class RegisterComponent implements OnInit {
   formRegister = new FormGroup({
     name: new FormControl('', [Validators.required]),
     lastname: new FormControl('', [Validators.required]),
+    sex: new FormControl('', [Validators.required]),
+    population: new FormControl('', [Validators.required]),
+    level: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.pattern(/[A-Za-z0-9\._%+\-]+@[A-Za-z0-9\.\-]+\.[A-Za-z]{2,}/)]),
     password: new FormControl('', [Validators.required,  Validators.pattern(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/)]),
     confpassword: new FormControl('', [Validators.required,  Validators.pattern(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/)], ),

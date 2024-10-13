@@ -21,6 +21,27 @@
                 <span class="fail-form">Ingrese su apellido</span>
             }
         </div>
+        <label for="sex">
+            <select id="sex"  name="sex" formControlName="sex" class="input">
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+            </select>
+            <span>Sexo:</span>
+        </label>
+        <label>
+            <input required="" placeholder="" type="text" class="input" formControlName="population">
+            <span>Ciudad/Población</span>
+        </label> 
+        <label for="level">
+            <select id="level"  name="level" formControlName="level" class="input">
+                <option value="Novato">Novato</option>
+                <option value="Principiante">Principiante</option>
+                <option value="Intermedio">Intermedio</option>
+                <option value="Avanzado">Avanzado</option>
+                <option value="Profesional">Profesional</option>
+            </select>
+            <span>Nivel:</span>
+        </label>  
         <label>
             <input required="" placeholder="" type="email" class="input" formControlName="email">
             <span>Email</span>
