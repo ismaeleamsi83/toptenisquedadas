@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { TokenService } from '../../services/token.service';
@@ -7,18 +8,21 @@ import { Profile } from '../../interfaces/profile';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+
 
 
 @Component({
   selector: 'app-editprofile',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, ProgressSpinnerModule],
   templateUrl: './editprofile.component.html',
   styleUrl: './editprofile.component.css'
 })
 export class EditprofileComponent implements OnInit{
 
   
+  loading: boolean = false;
 
   forms: FormGroup = new FormGroup({})
 
@@ -84,6 +88,7 @@ export class EditprofileComponent implements OnInit{
 
 
   getEmail(){
+    this.loading = true;
     this.tokenService.getEmail().subscribe({
       next: (response) => {
         console.log(response);
@@ -92,6 +97,7 @@ export class EditprofileComponent implements OnInit{
       },
       error: (error) => {
         console.error("error al recibir el email");
+        this.loading = false;
       },
       complete: () => {
         console.log("completado el email");
@@ -108,6 +114,7 @@ export class EditprofileComponent implements OnInit{
       },
       error: (error) => {
         console.error("error al recibir el token");
+        this.loading = false;
       },
       complete: () => {
         console.log("completado el token");
@@ -132,6 +139,7 @@ export class EditprofileComponent implements OnInit{
       },
       complete: () => {
         console.log("completado el usuario");
+        this.loading = false;
       }
     })
   }}

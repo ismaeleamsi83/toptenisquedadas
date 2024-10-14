@@ -38,8 +38,14 @@
                 <span>Historial de Partidos</span>
                 <span>Partidos Jugados: {{player!.matchesPlayed}}</span>
                 <span>Partidos Ganados: {{player!.matchesWon}}</span>
-                <span>Sets Ganados: </span>
-                <span>Porcentaje: {{(player!.matchesWon * 100) / player!.matchesPlayed}}% </span>
+                <span>Sets Ganados: 0</span>
+                <span>Porcentaje Ganados: 
+                    @if (player!.matchesPlayed == 0) {
+                        0%
+                    }@else {
+                        {{(player!.matchesWon * 100) / player!.matchesPlayed}}% 
+                    }
+                </span>
                 <!-- @for (item of player!.matchHistory; track $index) {
                     <span>{{item.result}} contra {{item.opponent}} fecha: {{item.date}}</span>
                 } -->

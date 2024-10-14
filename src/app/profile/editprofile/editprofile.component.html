@@ -1,3 +1,14 @@
+@if(loading){
+  <div class="card flex justify-content-center" id="spinner">
+    <p-progressSpinner 
+        styleClass="w-4rem h-4rem" 
+        strokeWidth="8" 
+        fill="var(--surface-ground)" 
+        animationDuration="1.5s" />
+  </div>
+}
+
+
 <h2>Editar Perfil</h2>
 <form (ngSubmit)="onSubmit()">
   <!-- Imagen -->
@@ -128,3 +139,8 @@
     <button type="submit" class="btn btn-primary">Guardar Cambios</button>
   </div>
 </form>
+
+
+
+
+

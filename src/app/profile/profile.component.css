@@ -20,7 +20,9 @@
             padding: 0;
             #image-profile{
                 height: 300px;
+                width: 300px;
                 border-radius: 50%;
+                object-fit: cover;
             }
             #name-profile{
                 font-size: 38px;

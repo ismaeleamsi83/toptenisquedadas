@@ -36,5 +36,13 @@ form {
   
 #image-profile{
   height: 100px;
+  width: 100px;
   border-radius: 50%;
+  object-fit: cover;
+}
+
+#spinner{
+  position: absolute;
+  left: calc(50% - 2rem);
+  top: calc(50% - 2rem);
 }
