@@ -5,73 +5,74 @@
 <div class="card flex justify-content-center">
     <p-toast />
 </div>
-
-<div id="container-profile">
-    <section>
-        <article>
-            <span>
-                @if (user.imageUrl != null) {
-                    <img src="{{fileImage}}" alt="" id="image-profile">
-                }@else {
-                    <img src="https://sportrenders.com/wp-content/uploads/2023/06/Rafa-Nadal-Imagen-PNG-Tenis-Render-Sport-Render-PNG.png" id="image-profile" alt="">
-                }
+<div id="container">
+    <div id="container-profile">
+        <section>
+            <article>
+                <span>
+                    @if (user.imageUrl != null) {
+                        <img src="{{fileImage}}" alt="" id="image-profile">
+                    }@else {
+                        <img src="https://sportrenders.com/wp-content/uploads/2023/06/Rafa-Nadal-Imagen-PNG-Tenis-Render-Sport-Render-PNG.png" id="image-profile" alt="">
+                    }
+                    
+                    
+                </span>
+            </article>
+            <article>
+                <span id="name-profile">{{user.name}} {{user.lastname}}</span>
+            </article>
+        </section>
+        <section>
+            <article>
+                <span>
+                    {{user.sex}} de {{user.age}} años
+                </span>
+                <span>
+                    {{user.population}}
+                </span>
+            </article>
+            <article>
+                <span>
+                    Preferencia: 
+                    {{user.preference}}
+                </span>
+                <span>
+                    Nivel: 
+                    {{user.level}}
+                </span>
+            </article>
+            <article>
+                <span>
+                    Partidos Jugados
+                </span>
+                <span>
+                    {{user.matchesPlayed}}
+                </span>
+            </article>
+            <article>
+                <span>
+                    Partidos Ganados
+                </span>
+                <span>
+                    {{user.matchesWon}}
+                </span>
+            </article>
+        </section>
+        <section>
+            <article>
+                <span>Sobre mí</span>
+                <span>{{user.about}}</span>
+            </article>
+            <article>
+                <span>Disponibilidad</span> 
+                <ul id="lista-disponibilidad">
+                    @for (item of user.availability; track $index) {
+                        <li>{{item}}</li>
+                    }
+                </ul>
                 
-                
-            </span>
-        </article>
-        <article>
-            <span id="name-profile">{{user.name}} {{user.lastname}}</span>
-        </article>
-    </section>
-    <section>
-        <article>
-            <span>
-                {{user.sex}} de {{user.age}} años
-            </span>
-            <span>
-                {{user.population}}
-            </span>
-        </article>
-        <article>
-            <span>
-                Preferencia: 
-                {{user.preference}}
-            </span>
-            <span>
-                Nivel: 
-                {{user.level}}
-            </span>
-        </article>
-        <article>
-            <span>
-                Partidos Jugados
-            </span>
-            <span>
-                {{user.matchesPlayed}}
-            </span>
-        </article>
-        <article>
-            <span>
-                Partidos Ganados
-            </span>
-            <span>
-                {{user.matchesWon}}
-            </span>
-        </article>
-    </section>
-    <section>
-        <article>
-            <span>Sobre mí</span>
-            <span>{{user.about}}</span>
-        </article>
-        <article>
-            <span>Disponibilidad</span> 
-            <ul id="lista-disponibilidad">
-                @for (item of user.availability; track $index) {
-                    <li>{{item}}</li>
-                }
-            </ul>
-            
-        </article>
-    </section>
+            </article>
+        </section>
+    </div>
 </div>
