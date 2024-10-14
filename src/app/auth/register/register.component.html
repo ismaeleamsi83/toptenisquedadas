@@ -41,11 +41,15 @@
                 <option value="Profesional">Profesional</option>
             </select>
             <span>Nivel:</span>
-        </label>  
+        </label>
+        <label for="birthday">
+            <input type="date" id="birthday"  name="birthday" formControlName="birthday" class="input">
+            <span>Fecha de Nacimiento:</span>
+        </label>    
         <label>
             <input required="" placeholder="" type="email" class="input" formControlName="email">
             <span>Email</span>
-        </label> 
+        </label>
         <div class="flex">
             @if(formRegister.get('email')?.invalid && submitted){
                 <span class="fail-form">Email no válido</span>

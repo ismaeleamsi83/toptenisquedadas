@@ -6,6 +6,7 @@ import { ToastModule } from 'primeng/toast';
 import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
 import { MessageService } from 'primeng/api';
+import { Touchpad } from 'lucide-angular';
 
 @Component({
   selector: 'app-register',
@@ -22,6 +23,7 @@ export class RegisterComponent implements OnInit {
     lastname: new FormControl('', [Validators.required]),
     sex: new FormControl('', [Validators.required]),
     population: new FormControl('', [Validators.required]),
+    birthday: new FormControl('', [Validators.required]),
     level: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.pattern(/[A-Za-z0-9\._%+\-]+@[A-Za-z0-9\.\-]+\.[A-Za-z]{2,}/)]),
     password: new FormControl('', [Validators.required,  Validators.pattern(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/)]),
@@ -40,9 +42,20 @@ export class RegisterComponent implements OnInit {
   }
 
   sendForms(){
+
+    
+
     this.submitted = true;
     if(this.confirmPass() && this.formRegister.valid){
       console.log('passwords match');
+      
+      if(this.formRegister.value.birthday){
+        const birth = new Date(this.formRegister.value.birthday);
+        const dateBirthday = this.transformDateBirthday(birth);
+        
+        this.formRegister.value.birthday = dateBirthday;
+      }
+      
       
       const formData = {...this.formRegister.value};
       delete formData.confpassword;
@@ -50,10 +63,10 @@ export class RegisterComponent implements OnInit {
       this.playerService.newPlayer(formData).subscribe({
         
         next: (res: any) => {
-          if (res.status === 201) {  // Verificar si el estado es 201
+          if (res.status === 201) {  
             console.log('Player created successfully!', res.body);
             this.showSuccess();
-            // Puedes hacer algo adicional, como mostrar un mensaje o redirigir
+            
           } else {
             console.log('Unexpected status code:', res.status);
           }
@@ -65,6 +78,19 @@ export class RegisterComponent implements OnInit {
         complete: () => console.info('complete')
       });
     }
+  }
+
+  transformDateBirthday(birthday: Date){
+    console.log(birthday.getDate().toString().padStart(2, '0'));
+    console.log((birthday.getMonth() + 1).toString().padStart(2, '0'));
+    console.log(birthday.getFullYear());
+
+    const day = birthday.getDate().toString().padStart(2, '0');
+    const mounth = (birthday.getMonth() + 1).toString().padStart(2, '0');
+    const year = birthday.getFullYear();
+
+    const birthdayFormated = `${year}-${mounth}-${day}`;
+    return birthdayFormated;
   }
 
   confirmPass():boolean{

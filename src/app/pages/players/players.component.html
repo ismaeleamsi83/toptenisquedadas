@@ -46,6 +46,8 @@
                     <div class="content-photo">
                         @if (product.imageUrl != null) {
                             <img src="{{ product.imageUrl }}" alt="Photo" />
+                        }@else {
+                            <img src="../../assets/images/user-icon-default.webp" alt="">
                         }
                         <span (click)="selectPlayer(product)" class="player-select">{{ product.name }}</span>
                     </div>
