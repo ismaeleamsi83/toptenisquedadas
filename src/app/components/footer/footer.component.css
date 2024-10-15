@@ -9,8 +9,9 @@ footer{
     /* background-color: rgb(135, 176, 212); */
     display: flex;
     flex-direction: column;
-    padding: 16px;
+    padding: 32px 16px 16px 16px;
     gap: 32px;
+    border-top: 1px solid var(--border);
     section{
         display: flex;
         justify-content: space-between;
