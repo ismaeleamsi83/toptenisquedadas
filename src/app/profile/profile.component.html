@@ -1,5 +1,4 @@
-<h2>Perfil</h2>
-<button (click)="editProfile()">Editar Perfil</button>
+
 
 
 <div class="card flex justify-content-center">
@@ -15,12 +14,11 @@
                     }@else {
                         <img src="https://sportrenders.com/wp-content/uploads/2023/06/Rafa-Nadal-Imagen-PNG-Tenis-Render-Sport-Render-PNG.png" id="image-profile" alt="">
                     }
-                    
-                    
                 </span>
             </article>
             <article>
                 <span id="name-profile">{{user.name}} {{user.lastname}}</span>
+                <button (click)="editProfile()" id="edit-profile-btn">Editar Perfil</button>
             </article>
         </section>
         <section>

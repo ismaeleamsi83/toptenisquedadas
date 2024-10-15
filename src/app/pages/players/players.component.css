@@ -40,6 +40,19 @@
     }
 } 
 
+.custom-table ::ng-deep .p-paginator {
+    background-color: var(--secondary); /* Cambia este color según tu preferencia */
+    color: white;
+    border-radius: 4px;
+}
+
+.custom-table ::ng-deep .p-datatable-header {
+    background-color: var(--accent); /* Cambia este color según tu preferencia */
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+}
+
 @media (max-width: 767px) {
     .card{
         padding: 16px 32px;

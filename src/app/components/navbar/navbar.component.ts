@@ -28,7 +28,7 @@ export class NavbarComponent implements OnInit, OnDestroy  {
     { title: 'Inicio', url: '', selected: false },
     { title: 'Jugadores', url: 'players', selected: false },
     { title: 'Ranking', url: '/', selected: false },
-    { title: 'Foro', url: '/', selected: false },
+    { title: 'Foro', url: 'foro', selected: false },
     { title: 'Pistas', url: '/', selected: false },
   ]
 

@@ -1,5 +1,5 @@
 #container{
-    margin: 0 16px;
+    margin: 64px 16px;
 }
 #container-profile{
     display: flex;
@@ -7,20 +7,40 @@
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    
+    background-color: var(--secondary);
     section:nth-child(1){
         width: 100%;
         display: flex;
         padding: 16px;
-        background-color: #E2F5FF;
+        /* justify-content: center; */
+        align-items: center;
+        /* background-color: #E2F5FF; */
         border: 2px solid gainsboro;
+        background: url('./../../assets/images/back-player.jpg');
+        background-size: cover;
+        background-position: center center;
+        
         article{
             width: 50%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             margin: 0;
             padding: 0;
+            #edit-profile-btn {
+                margin-left: 10px;
+                padding: 5px 10px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                cursor: pointer;
+              }
+              
+            #edit-profile-btn:hover {
+                background-color: #0056b3;
+            }
+              
             #image-profile{
                 height: 300px;
                 width: 300px;
@@ -48,7 +68,7 @@
             padding: 16px;
             gap: 8px;
             font-size: 20px;
-            background-color: rgb(255, 255, 255);
+            /* background-color: rgb(255, 255, 255); */
             span:nth-child(1){
                 font-weight: 600;
             }
@@ -66,7 +86,7 @@
             padding: 16px;
             gap: 8px;
             font-size: 16px;
-            background-color: rgb(255, 255, 255);
+            /* background-color: rgb(255, 255, 255); */
             span:nth-child(1){
                 font-size: 18px;
                 font-weight: 600;
