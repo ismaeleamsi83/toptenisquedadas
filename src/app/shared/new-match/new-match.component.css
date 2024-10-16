@@ -1,9 +1,53 @@
-div{
-    margin-bottom: 16px;
+.card {
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
 }
 
-.content-table{
-    input{
-        width: 2ch; 
-    }
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
 }
+
+label {
+    font-weight: bold;
+    min-width: 150px;
+    color: #333;
+}
+
+input, select {
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+p-table {
+    margin: 20px 0;
+}
+
+.content-table {
+    text-align: center;
+}
+
+.content-table input {
+    text-align: center;
+    width: 40px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+p-button {
+    padding: 10px 20px;
+}
+
+

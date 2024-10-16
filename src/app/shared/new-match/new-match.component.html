@@ -1,20 +1,19 @@
 <div class="card flex justify-content-center">
-    <!-- <p-button (onClick)="showDialog()" label="Show" /> -->
     <p-dialog header="Añadir nuevo Partido" [modal]="true" [(visible)]="showMatch" [style]="{ maxWidth: '800px', width: '100%' }">
-        <div class="flex align-items-center gap-3 mb-3">
+        <div class="form-group">
             <label for="fecha">Fecha:</label>
             <input type="date" id="fecha" name="fecha">
         </div>
-        <div class="flex align-items-center gap-3 mb-3">
+        <div class="form-group">
             <label for="timestart">Hora de comienzo:</label>
             <input type="time" id="timestart" name="timestart">
         </div>
-        <div class="flex align-items-center gap-3 mb-3">
+        <div class="form-group">
             <label for="timeend">Hora de final:</label>
             <input type="time" id="timeend" name="timeend">
         </div>
-        <div class="flex align-items-center gap-3 mb-3">
-            <label for="timeend">Tipo de pista:</label>
+        <div class="form-group">
+            <label for="pista">Tipo de pista:</label>
             <select name="pista" id="pista">
                 <option value="Pista dura">Pista dura</option>
                 <option value="Tierra batida">Tierra batida</option>
@@ -35,28 +34,17 @@
             <ng-template pTemplate="body" let-player>
                 <tr class="content-table">
                     <td>{{ player.name }}</td>
-                    <td>
-                        <input type="text" [value]="player.set1" size="1" maxlength="1">
-                    </td>
-                    <td>
-                        <input type="text" [value]="player.set2" size="1" maxlength="1">
-                    </td>
-                    <td>
-                        <input type="text" [value]="player.set3" size="1" maxlength="1">
-                    </td>
-                    <td>
-                        <input type="text" [value]="player.set4" size="1" maxlength="1">
-                    </td>
-                    <td>
-                        <input type="text" [value]="player.set5" size="1" maxlength="1">
-                    </td>
+                    <td><input type="text" [value]="player.set1" size="1" maxlength="1"></td>
+                    <td><input type="text" [value]="player.set2" size="1" maxlength="1"></td>
+                    <td><input type="text" [value]="player.set3" size="1" maxlength="1"></td>
+                    <td><input type="text" [value]="player.set4" size="1" maxlength="1"></td>
+                    <td><input type="text" [value]="player.set5" size="1" maxlength="1"></td>
                 </tr>
             </ng-template>
         </p-table>
-        <div class="flex justify-content-end gap-2">
+        <div class="action-buttons">
             <p-button label="Cancelar" severity="secondary" (onClick)="hideDialog()" />
             <p-button label="Guardar" (onClick)="hideDialog()" />
         </div>
     </p-dialog>
 </div>
-
