@@ -108,6 +108,10 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                #image-profile{
+                    height: 150px;
+                    width: 150px;
+                }
             }
         }
         section:nth-child(2), section:nth-child(3){
