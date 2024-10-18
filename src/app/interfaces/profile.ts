@@ -16,4 +16,5 @@ export interface Profile {
     fileRaw?:any;
     fileName?:any;
     token?: string;
+    notes?:[];
 }

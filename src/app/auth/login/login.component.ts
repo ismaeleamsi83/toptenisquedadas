@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit {
           // localStorage.setItem('token', response.body.token);
           this.tokenService.setToken(response.body.token);
           setTimeout(()=>{
-            this.router.navigate(['']);
+            this.router.navigate([`/profile/${this.formLogin.value.email}`]);
           }, 1500);
         },
         error:(err) =>{
